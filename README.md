@@ -1,2 +1,16 @@
-# COMS327-S2025
-Assignments and projects for a course on advanced programming concepts using C and C++. Topics include object-oriented programming, memory management, parameter passing, inheritance, compilation, debugging, and software maintenance. The course also emphasizes practical skills such as build systems, version control, and development environments.
+# COMS 327 – Spring 2025
+
+This repository contains programming assignments and projects for COMS 327: Advanced Programming Techniques, taken during Spring 2025.
+
+## 📚 Course Description
+
+This course explores advanced programming topics using both **C** and **C++**. Core concepts include:
+
+- Object-oriented programming (OOP)
+- Memory management and parameter passing
+- Inheritance and polymorphism
+- Compilation and build tools
+- Debugging and maintenance practices
+- Version control with Git
+
+Projects in this repo reflect hands-on application of these topics through significant programming assignments.
