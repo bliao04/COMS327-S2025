@@ -1,0 +1,19 @@
+2/28 4:00 PM: Started assignment.
+2/28 5:00 PM: Started restructuring of code, moving structs to header. 
+2/28 6:00 PM: Finished restructuring, added function prototypes for monsters.c to header.
+3/1 1:00 PM: Created new structs for monsters (Stats, Sprite) and added a new struct for movement (Event).
+3/1 2:00 PM: Updated memory allocation and dungeon initialization.
+3/1 2:30 PM: Started on monsters.c, generating monsters w/ binary characteristics (in, te, tu, eb).
+3/1 4:00 PM: Added function to add monsters to a dungeon, started working on monster movement/pathfinding based on characteristics. 
+3/1 5:00 PM: Added helper functions for monster placement and movement, check if a movement is valid or not and check if a monster is currently in the same room as the pc.
+3/2 3:00 PM: More work on monster movement, implementation of turn logic. 
+3/2 4:00 PM: Added --nummon flag to main, created prototype gameplay loop (no user input control yet). 
+3/2 4:30 PM: Fixed a bug causing segmentation fault with --nummon flag. 
+3/3: 4:00 PM: Functional generation of monsters w/ binary characteristics in dungeon, improvements on characteristic logic.
+3/3 5:00 PM: Fixed a bug where non-tunneling monsters could be generated outside of a room, and tunneling monsters could be generated in the same rooms as the pc.
+3/3 6:30 PM: Functional turn implementation w/ drunken roving idiot pc movement, dungeon is printed for every pc move.
+3/4 4:00 PM: Slight tweaks to read and write to file functions.
+3/4 5:00 PM: Fixed a bug where pc sprite was not present in first printed dungeon with --save flag.
+3/4 5:30 PM: Fixed a bug that was causing the loaded dungeon to be slightly different from the saved dungeon.
+3/4 6:00 PM: Slight tweaks to read file function, fixed a segmentation fault error when using --load flag.
+3/5 4:00 PM: Fixed a bug that caused the game to end prematurely. 

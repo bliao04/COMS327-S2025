@@ -1,0 +1,14 @@
+2/14 4:00 PM: Started assignment.
+2/14 5:00 PM: Added heap implementation from Sheaffer assignment 1.02 solution.
+2/15 1:00 PM: Created new struct Tile_Node for use in distance maps. 
+2/15 1:30 PM: Updated dungeon struct, added new cost grids for non-tunneling and tunelling monsters (csnt, cst).
+2/16 1:00 PM: Started implementation of nontunelling djikstras. 
+2/16 2:30 PM: Added nontunelling map to print_dungeon function. Minor changes to print_dungeon to accept nontunneling and tunelling prints. 
+2/16 3:00 PM: Fixed a bug in nontunelling djikstras implementation where not all surrounding tiles of pc were checked before continuing. 
+2/16 4:00 PM: Fixed a bug in nontunelling djikstras implementation where the algorithm would stop before clearing the entire dungeon. 
+2/16 5:00 PM: Finalized nontunelling djikstras implementation.
+2/21 4:00 PM: Started implementation of tunelling djikstras. 
+2/21 5:30 PM: Added tunelling map to print_dungeon function.
+2/21 6:00 PM: Fixed a bug in tunelling djikstras implementation that was printing the immutible wall.
+2/22 1:00 PM: Changed tunelling djikstras implementation to ensure tiles surrounding pc are always cost 1.
+2/22 3:00 PM: Finalized tunelling djikstras implementation.

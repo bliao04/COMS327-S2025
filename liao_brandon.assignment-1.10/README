@@ -1,0 +1,87 @@
+This iteration of the dungeon generator implements the ranged combat specified in assignment 1.10 with some extensions to make the system more encapsulating and complete. 
+Ranged combat is implemented in two forms with standard ranged combat using RANGED weapons and AMMUNITION as well as spell/magic ranged combat using SCROLLs (spell books) and MANA. 
+
+Standard ranged combat uses bows/crossbows as RANGED weapons and arrows/crossbolts as AMMUNITION. RANGED weapons and AMMUNITION are randomly generated and placed on the dungeon floor. RANGED weapons can be picked up and
+equipped in the RANGED slot in the players inventory, they also have a max range to which they can fire which is specified in the ATTR section of the text file (sa in code). AMMUNITION can be picked up from the floor, with the quantity of a specific 
+AMMUNITION item being specified in the ATTR section of the text file (sa in code), AMMUNITION cannot be equipped by the player, instead having ammunition in the players inventory is sufficient. 
+A standard RANGED attack can be initiated once the player has a RANGED weapon equipped with 'r' which renders a cursor (red X) which can be controlled by standard movement keys, once the cursor is in the desired firing location the attack can be 
+fired using 'f'. If the player has no ammunition in their inventory the attack will be cancelled, if there is AMMUNUTION in their inventory the player will be prompted to select which AMMUNITION item they would like to use.
+The total damage of the attack is calculated based on the DAM of the RANGED weapon alongside the DAM of the AMMUNITION used, after a successful attack, the quantity of the AMMUNITION used in the attack will be decremented and if it reaches 0 it will
+be removed from the players inventory and the dungeon. Using a standard ranged attack will end the players turn.
+
+Spell/magic ranged combat uses SCROLLs as weapons and a simple MANA system when casting a SCROLL. SCROLLs are randomly generated and placed on the dungeon floor. SCROLLs can be picked up but cannot be equipped by the player, instead having a SCROLL
+in the players inventory is sufficient, they also have a max range to which they can be casted specified in in the ATTR section of the text file (sa in code). A spell/magic ranged attack can be initiated once the player has a SCROLL in their inventory with 'p', 
+the player will be prompted which SCROLL in their inventory they would like to use after selecting a scroll a cursor (yellow X) alongside the radius of the spell (fixed to 3 for now) will be rendered and can be controlled by standard movement keys,
+once the cursor is in the desired casting location the attack can be casted using 'f', if the player doesnt have sufficient MANA to cast the attack will be cancelled (fixed 50 for now), else the attack damages all characters in the radius of the spell. 
+The total damage of the attack is calculated based on the DAM of the SCROLL which is casted, after a successful attack, the SCROLL uesd in the attack will be removed from the players inventory and the dungeon and 50 mana will be decremented from the player.
+Using a spell/magic ranged attack will end the players turn. 
+
+This iteration of the dungeon generator also implements a simple HP and mana regeneration system using the 'rest' action (5,' ', or .). Resting will regenerate 5% of the players HP and 10% of their mana using a player turn. 
+
+EXAMPLE items added to object_desc.txt (tested and working on my end):
+BEGIN OBJECT
+NAME a composite longbow
+TYPE RANGED
+COLOR YELLOW
+WEIGHT 10+0d1
+HIT 0+0d1
+DAM 100+15d6
+ATTR 10+0d1
+VAL 100+2d50
+DODGE 0+0d1
+DEF 0+0d1
+SPEED 0+0d1
+DESC
+A mastercrafted bow laminated with horn and sinew. The curved limbs store
+tremendous energy, making it capable of punching through armor at long range.
+.
+RRTY 10
+ART FALSE
+END
+
+BEGIN OBJECT
+NAME lead-tipped arrows
+TYPE AMMUNITION
+COLOR BLACK
+WEIGHT 0+0d1
+HIT 0+0d1
+DAM 5+1d6
+ATTR 5+1d6
+VAL 0+0d1
+DODGE 0+0d1
+DEF 0+0d1
+SPEED 0+0d1
+DESC
+A small bunch of lead-tipped arrows.
+.
+RRTY 5
+ART FALSE
+END
+
+BEGIN OBJECT
+NAME poison ball
+TYPE SCROLL
+COLOR MAGENTA
+WEIGHT 0+0d1
+HIT 0+0d1
+DAM 25+5d7
+ATTR 10+0d1
+VAL 10+0d1
+DODGE 0+0d1
+DEF 0+0d1
+SPEED 0+0d1
+DESC
+A piece of parchment with instructions detailing how to cast a forbidden spell of poison.
+Use at your own risk, it is capable of affecting large areas.
+.
+RRTY 10
+ART FALSE
+END
+
+Users should compile the code with the following format: g++ -Wall -Werror -ggdb dungeon_generator.cpp heap.cpp monsters.cpp dungeon.cpp print.cpp sprite.cpp monster.cpp pc.cpp dice.cpp item.cpp object_fac.cpp monster_fac.cpp -lm -lncurses -o dungeon_generator
+Or use the Makefile with the following format: make dungeon_generator or make all
+Users should run the program with the following formats: 
+./dungeon_generator to generate a random dungeon.
+./dungeon_generator --save to generate a random dungeon and save to file or save the loaded dungeon back to file.
+./dungeon_generator --load to load the dungeon from file. 
+./dungeon_generator --nummon to generate a dungeon with a specific number of monsters, put the number of monsters you would like to generate after the --nummon flag eg 1,2,3,etc (Note: when using the --nummon flag with --load or --save, use the --nummon flag before the --load or --save flag).

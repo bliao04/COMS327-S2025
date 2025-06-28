@@ -1,0 +1,21 @@
+4/18 2:00 PM: Started assignment.
+4/18 3:00 PM: Added some small changes to header for 1.09 specifications, added inventory and equipment to PC class. 
+4/18 3:30 PM: Started implementation of item/equipment list, added commands to input processing. 
+4/18 4:30 PM: Added working item and equipment windows, still need to implement item/equipment commands.
+4/18 6:00 PM: Most of implementation of item/equipment commands, still need to test after pickup items. 
+4/18 6:30 PM: Started implementation of manual item pickup, added pickup command to input processing. 
+4/19 1:00 PM: Fixed a bug with picking up items caused by incorrect PC position logic. 
+4/19 2:30 PM: Added pick up menu for stacked items/equipment in dungeon. 
+4/19 3:00 PM: Working manual item pickup with menu, picked up items showing up in inventory window. 
+4/19 3:30 PM: Fixed a bug with wear command showing up in equipment window and takeoff command showing up in inventory window.
+4/19 4:00 PM: Fixed a bug with inspect command where description wasnt fully displayed or previous window was not cleared, fixed a bug where dropped items were returning to original position instead of PC position. 
+4/19 5:00 PM: Added persistent player character logic in main for dungeon regeneration.
+4/19 5:30 PM: Started implementation of updated combat system. 
+4/19 6:00 PM: Fixed some dice logic in factory classes to fit with 1.09 combat specifications.
+4/19 7:00 PM: Removed previous iteration combat logic and added 1.09 combat logic to move functions. 
+4/21 2:00 PM: Fixed a bug with movement logic that was allowing NPCs to move into PC tile when attacking. 
+4/21 3:00 PM: Fixed a bug with movement logic that was allowing PC to move into cells occupying NPCs when attacking.
+4/21 4:00 PM: Fixed a bug with NPC collision that was not properly displacing when moving into occupied cells.
+4/21 4:30 PM: Started implementation of monster targeting command, using similar implementation to teleport command. 
+4/21 5:30 PM: Fixed a bug with input handling that was causing the cursor to not move when in look mode. 
+4/21 6:00 PM: Fixed a segfault with name and description copying causing name and description not to be properly rendered after targeting.

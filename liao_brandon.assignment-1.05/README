@@ -1,0 +1,18 @@
+This program generates a random 80x21 dungeon layout with rooms, corridors, and staircases. Rooms placed until the maximum number of rooms have been 
+placed or the maximum number of attempts has been reached and an x/y coordinate pathing algorithm is used to connect rooms. Staircases are randomly placed
+on floor tiles within the dungeon (currently only 1 up and down staircase). 
+This iteration of the dungeon generator uses ncurses to implement a non-buffered user interface used to drive the pc manually. With that, this iteration
+contains an improved turn-based game play loop based on user input.
+Ncurses are also used to implement a scrollable (if list exceeds 24 rows) monster list window which displays a list of monsters currently in the dungeon
+formatted with the char representing the monster and their position relative to the pc. This window can be accessed through user input ('m') and (ESC) to 
+return to player control.
+This iteration also contains functional staircases that can be accessed through user input ('<' or '>' while standing on respective up or down staircase).
+When staircases are accessed, a new dungeon is generated and populated with the pc and new monsters. 
+
+Users should compile the code with the following format: gcc -Wall -Werror -ggdb dungeon_generator.c heap.c monsters.c dungeon.c print.c -lm -lncurses -o dungeon_generator
+Or use the Makefile with the following format: make dungeon_generator
+Users should run the program with the following formats: 
+./dungeon_generator to generate a random dungeon.
+./dungeon_generator --save to generate a random dungeon and save to file or save the loaded dungeon back to file.
+./dungeon_generator --load to load the dungeon from file. 
+./dungeon_generator --nummon to generate a dungeon with a specific number of monsters, put the number of monsters you would like to generate after the --nummon flag eg 1,2,3,etc (Note: when using the --nummon flag with --load or --save, use the --nummon flag before the --load or --save flag).

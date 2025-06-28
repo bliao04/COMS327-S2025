@@ -1,0 +1,21 @@
+3/28 3:00 PM: Started assignment. 
+3/28 4:00 PM: Started working on C to C++ conversion, all files w/ .cpp extension. 
+3/28 5:00 PM: LOTS of casting, fixed most C to C++ conversion errors. 
+3/28 7:00 PM: Restructuring main header file, converted important C structs to C++ classes, started getter/setter functions for C/C++ interplayability.
+3/29 2:00 PM: More restructuring, converted Makefile to g++, moved sprite and PC into separate files, more getter/setter functions in header completed.
+3/29 4:30 PM: Sprite and PC function implementation.
+3/29 7:00 PM: More sprite and PC functions and implementation, changed lots of logic in dungeon_generator, print, dungeon, monster to getter/setter. 
+3/29 8:00 PM: MANY MANY C to C++ conversion error fixes. 
+3/30 1:00 PM: Fixed a bunch of seg fault errors from dungeon initialization.
+3/30 3:00 PM: Fixed a bunch of seg fault errors from reading/writing dungeon. 
+3/30 4:30 PM: Functional dungeon generator in C++ environment, some untouched functions and not all logic converted to getter/setter. 
+3/30 5:00 PM: Started work on "Fog of War", added memory logic to PC.
+3/30 6:00 PM: More work on "Fog of War", added memory logic to print. 
+3/30 7:30 PM: Functional "Fog of War" with 3 radius visibility and PC memory.
+3/31 3:00 PM: Started working on "Fog of War" toggle command. 
+3/31 4:00 PM: Working toggle command for "Fog of War". 
+3/31 5:00 PM: Started working on teleport PC command, restructuring process pc input function to work with teleport cursor.
+3/31 6:30 PM: Functional cursor movement in teleport mode, added random teleport case (r) to input handling.
+4/1 3:00 PM: Fixed a bug where teleport would just duplicate PC char at cursor char instead of actually teleporting.
+4/1 4:00 PM: Fixed a bug where original PC char wasnt removed after teleportation.
+4/1 5:00 PM: Both debugging commands functional. 

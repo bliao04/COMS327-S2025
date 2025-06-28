@@ -1,0 +1,11 @@
+This program generates a word search puzzle based on user specifications. Users provide the grid size and the words to hide/find as command-line arguments. The program will randomly place words in valid positions within the grid in one of four directions (right, down, diagonal down, diagonal up). Empty spaces are filled with random uppercase letters and if a word cannot fit, the program exits with an error message. 
+
+Users should compile the code with the following format:
+gcc wordSearchGenerator.c -o wordsearch -Wall -Werror
+Or use the Makefile with the following format:
+make wordSearchGenerator
+Users should run the program with the following format: 
+./wordsearch 10 HELLO WORLD WORD FUN ... 
+with 10 being the grid size and the following parameters being the words to hide/find.
+
+No changelog included because professor stated it was not necessary for assignment0.

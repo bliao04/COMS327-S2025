@@ -1,0 +1,10 @@
+This program generates random 80x21 dungeon layouts with rooms, corridors, and staircases. 
+Rooms are generated with a minimum of width/height of 4x3 and a set max for width/height (between 4 and 7, between 3 and 6), they are then placed in random positions within the dungeon border with checks to ensure rooms do not overlap or touch. 
+Rooms are placed until the maximum number of rooms have been placed or the maximum number of attempts (2000) has been reached.
+Corridors are placed using the center point of rooms to calculate the distance between specific rooms center points in order to find the nearest room. 
+The path to the room is placed moving horizontally and vertically from the previous rooms center point to the next rooms center point. This continues until all rooms are connected or the maximum number of paths has been generated. 
+Staircases are placed randomly within the dungeon border checking that the tile it is placed on is either a room or corridor tile before proceeding. 
+
+Users should compile the code with the following format: gcc dungeon_generator.c -o dungeon_generator -lm -Wall -Werror
+Or use the Makefile with the following format: make dungeon_generator
+Users should run the program with the following format: ./dungeon_generator

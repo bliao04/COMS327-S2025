@@ -1,0 +1,20 @@
+4/5 1:00 PM: Started assignment.
+4/5 1:30 PM: Fixed Makefile, (I assume TA's were using make all which was broken last iteration).
+4/5 2:30 PM: Added 1.07 classes to header file (item, dice), added description files to ~/.rlg327. 
+4/5 3:00 PM: Added variables to Dungeon and Sprite class for parsing, added new 1.07 stats to Stats class. 
+4/5 3:30 PM: Fixed a C to C++ conversion error in monsters.
+4/5 4:00 PM: Started implementation of dice class. 
+4/5 5:00 PM: Functional dice logic added getdie and rolldie to main.
+4/6 1:00 PM: Started implementation of monster parsing. 
+4/6 3:30 PM: Majority of monster parsing finished, not sure whether or not to split some variables in Monster and Stats (keep it in Stats for now).
+4/6 4:00 PM: Fixed a bug with parsing descriptions, added new variables to Dungeon specific to monster descriptions, monsters stored in dungeon class.
+4/6 4:30 PM: Started implementation of printing parsed monster definitions for 1.07.
+4/7 3:00 PM: Majority of monster printing finished, fixed a core dump issue with printing. 
+4/7 3:30 PM: Started implementation of item parsing. 
+4/7 5:00 PM: Majority of item parsing finished, sameish implementation as monster parsing, items stored in dungeon class.
+4/7 6:00 PM: Started implementation of item printing.
+4/7 7:00 PM: Majority of item printing finished, sameish implementation as monster printing. 
+4/8 3:00 PM: Fixed some dice logic in parse and print functions to fit 1.07 descriptions, some attributes are prerolled some are printed with in dice form.
+4/8 3:30 PM: Fixed a simple bug with reading symb in monster description. 
+4/8 4:30 PM: Functional parsing and printing for both items and monsters!
+4/8 5:00 PM: Testing Makefile and print for grading, (Every Makefile command works on my end and code compile and prints parsed definitions, maybe try command in README if Makefile is still broken?).

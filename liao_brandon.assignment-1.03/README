@@ -1,0 +1,15 @@
+This program generates a random 80x21 dungeon layout with rooms, corridors, and staircases. Rooms placed until the maximum number of rooms have been 
+placed or the maximum number of attempts has been reached and an x/y coordinate pathing algorithm is used to connect rooms. Staircases are randomly placed
+on floor tiles within the dungeon (currently only 1 up and down staircase). 
+This iteration of the dungeon generator implements Djikstras algorithm with 8-way connectivity to create distance maps for nontunneling and tunneling 
+monsters based on the player characters position. The algorithm uses Dr. Sheaffer's provided heap implementation (heap.h and heap.c from assignment-1.02).
+The nontunneling map ignores walls finding a path through floor tiles (rooms and corridors) while the tunneling map uses weights based on the hardness 
+of tiles. Floor tiles w/ hardness 0 have a weight of 1, wall tiles w/ hardness 1-254 have a weight of 1 + (hardness / 85).
+This iteration of the dungeon generator renders 3 dungeon map views (standard, nontunneling, and tunneling dungeon map views). 
+
+Users should compile the code with the following format: gcc dungeon_generator.c heap.c -o dungeon_generator -lm -Wall -Werror
+Or use the Makefile with the following format: make dungeon_generator
+Users should run the program with the following formats: 
+./dungeon_generator to generate a random dungeon.
+./dungeon_generator --save to generate a random dungeon and save to file or save the loaded dungeon back to file.
+./dungeon_generator --load to to load the dungeon from file. 

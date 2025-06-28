@@ -1,0 +1,17 @@
+1/31 5:00 PM: Started assignment.
+1/31 6:00 PM: Created baseline structure definitions to facilitate dungeon generation ie dungeon, dungeon rooms, tiles, and paths/corridors through the dungeon.
+2/1 5:00 PM: Created dungeon initialization function w/ memory allocation for the dungeon grid, path grid, and rooms array.
+2/1 6:00 PM: Created placeholder functions for room placement, corridor generation, staircase generation.
+2/1 6:30 PM: Started room placement with the place_rooms function. 
+2/1 7:00 PM: Added a position structure and rooms array to dungeon for place_rooms function.
+2/1 8:00 PM: Added a center variable within rooms for calculations within place_rooms and place_corridors function.
+2/1 9:00 PM: Created print_dungeon function to display generated dungeons in the console.
+2/2 6:00 PM: Added dungeon generation algorithm, right now starts with a blank wall grid and then places rooms. Hardness is set as a placeholder value for now.
+2/2 7:00 PM: Fixed a bug related to the print and dungeon buffer not being in sync.
+2/2 8:00 PM: Added immutible border to generate_dungeon.
+2/2 8:30 PM: Fixed a bug in room placement that allowed rooms to overlap with the dungeon border, added a check that prevents overlapping alongside colliding rooms.
+2/3 3:00 PM: Added pathfinding algorithm to place_corridors function.
+2/3 5:30 PM: Added a helper function all_rooms_connected for place_corridors.
+2/3 8:00 PM: Fixed a bug in the pathfinding within place_corridors that was allowing paths to overlap in rooms, fixed a bug where paths wouldnt overlap with other paths.
+2/4 5:00 PM: Added staircase placement with the place_staircases function and added it to the the print function. Right now only one < and one > are randomly placed on a floor tile.
+2/4 6:30 PM: Finalized all placement functions to properly work within generate_dungeon and main.

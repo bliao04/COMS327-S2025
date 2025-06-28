@@ -1,0 +1,14 @@
+2/7 4:00 PM: Started assignment.
+2/7 5:00 PM: Added file version and file size to dungeon struct for load/save to file.
+2/7 6:00 PM: Added pc to dungeon struct.
+2/7 6:30 PM: Updated init_dungeon, generate_dungeon and print_dungeon to work with new pc addition to dungeon_struct.
+2/8: 2:00 PM: Added nu (number of up staircases), nd (number of down staircases), u_stairs (position of up staircase), and d_stairs (position of down staircase) to dungeon struct to properly load/save staircase positions in file.
+2/8 3:00 PM: Updated all_rooms_connected, place_staircases, generate_dungeon, and print_dungeon to work with the new additions to structures. 
+2/8 4:00 PM: Started on read_dungeon and write_dungeon functions.
+2/10 5:00 PM: Added logic in main for loading/saving to file in specific directory (getenv + string logic to find /.rlg327/dungeon).
+2/10 6:00 PM: Added helper function test_args to help process commandline arguments within main. 
+2/10 7:00 PM: Added logic in main to process commandline arguments. 
+2/10 8:00 PM: Fixed a bug in read/write functions that caused corridors to not save/load properly when generating a dungeon.
+2/11 4:00 PM: Fixed a bug in read/write functions that caused staircases to not properly generate when using a commandline flag (--save).
+2/11 5:00 PM: Fixed a bug in main when using --save alone, it overwrote the existing dungeon in the dungeon file instead of saving the existing dungeon again. 
+2/12 4:00 PM: Finalized some endian conversions and all functions for 1.02.

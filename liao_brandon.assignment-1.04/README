@@ -1,0 +1,13 @@
+This program generates a random 80x21 dungeon layout with rooms, corridors, and staircases. Rooms placed until the maximum number of rooms have been 
+placed or the maximum number of attempts has been reached and an x/y coordinate pathing algorithm is used to connect rooms. Staircases are randomly placed
+on floor tiles within the dungeon (currently only 1 up and down staircase). 
+This iteration of the dungeon generator implements prototype turn based pc and monster movement using the pathfinding created in the last iteration (using Dr. Sheaffer's heap implementation). Monsters are randomly generated w/ the possibility (50% for each characteristic) of possessing 4 characteristics (intelligence, telepathy, tunneling, and erratic behavior). Non-tunneling monsters are placed within dungeon rooms and if possible, not the room the pc is currently in. Tunneling monsters can be placed anywhere within the dungeon borders except in the room the pc is currently in. 
+This iteration also contains a rudimentary gameplay loop (due to lack of user input at this point) w/ "drunken roving idiot" pc movement. The dungeon is printed with every pc move and also when the game is over (killed by monster) regardless if the pc made a move (Note: it is possible for the game to never end if the wrong monsters are generated and due to the 1.04 specifications of pc movement, this will be updated in the next iteration). 
+
+Users should compile the code with the following format: gcc dungeon_generator.c heap.c monsters.c -o dungeon_generator -lm -Wall -Werror
+Or use the Makefile with the following format: make dungeon_generator
+Users should run the program with the following formats: 
+./dungeon_generator to generate a random dungeon.
+./dungeon_generator --save to generate a random dungeon and save to file or save the loaded dungeon back to file.
+./dungeon_generator --load to load the dungeon from file. 
+./dungeon_generator --nummon to generate a dungeon with a specific number of monsters, put the number of monsters you would like to generate after the --nummon flag eg 1,2,3,etc (Note: when using the --nummon flag with --load or --save, use the --nummon flag before the --load or --save flag).

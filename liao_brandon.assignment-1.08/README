@@ -1,0 +1,18 @@
+This program generates a random 80x21 dungeon layout with rooms, corridors, and staircases. Rooms are placed until the maximum number of rooms have been 
+placed or the maximum number of attempts has been reached and an x/y coordinate pathing algorithm is used to connect rooms. Staircases are randomly placed
+on floor tiles within the dungeon (currently only 1 up and down staircase). Monsters are randomly generated and placed within the dungeon with each monster 
+having the capability of possessing certain attributes (intelligence, telepathy, tunneling, erratic behavior). Based on the attributes monsters either use pathfinding 
+to find and approach the PC or move randomly with tunneling monsters having the ability to tunnel through walls. 
+This iteration of the dungeon generator implements loading items and monsters from file alongside factory classes which generate dynamic instances of objects. Monster generation
+routines have been refined and updated to cover new assignment specifications such as rarity and unique. 
+This iteration of the dungeon generator also includes item generation and placement within the dungeon with 10 items being loaded per level. Items have different symbols based on their 
+in game type and follow a similar generation routine to monster generation with rarity and artifact being accounted for in generation.
+This iteration of the dungeon generator also includes improved printing with colored monsters and items. Monsters with multiple colors are rendered with the first color only. 
+
+Users should compile the code with the following format: g++ -Wall -Werror -ggdb dungeon_generator.cpp heap.cpp monsters.cpp dungeon.cpp print.cpp sprite.cpp monster.cpp pc.cpp dice.cpp item.cpp object_fac.cpp monster_fac.cpp -lm -lncurses -o dungeon_generator
+Or use the Makefile with the following format: make dungeon_generator
+Users should run the program with the following formats: 
+./dungeon_generator to generate a random dungeon.
+./dungeon_generator --save to generate a random dungeon and save to file or save the loaded dungeon back to file.
+./dungeon_generator --load to load the dungeon from file. 
+./dungeon_generator --nummon to generate a dungeon with a specific number of monsters, put the number of monsters you would like to generate after the --nummon flag eg 1,2,3,etc (Note: when using the --nummon flag with --load or --save, use the --nummon flag before the --load or --save flag).

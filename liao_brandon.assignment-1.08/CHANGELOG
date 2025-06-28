@@ -1,0 +1,16 @@
+4/11 2:00 PM: Started assignment.
+4/11 3:00 PM: Added monster and object factories to header.
+4/11 3:30 PM: Added factories and some item variables to dungeon class and added items to initialization, also added color to sprites and items. 
+4/11 4:30 PM: Started implementation of factory classes. 
+4/11 6:00 PM: Added placeitem function for main, added item and sprite loading logic to main including colors.
+4/11 6:30 PM: Fixed a bug with rendering monsters symbols. 
+4/11 7:00 PM: Fixed a bug with some of the sprite functions, added 1.07 and 1.08 vars to some of the sprite functions.
+4/12 1:00 PM: Started implementation of artifact and unique monster logic for factory functions.
+4/12 3:00 PM: Fixed a bug with regeneration and unique monsters. 
+4/12 4:00 PM: Added more free/regeneration logic to main gameplay loop.
+4/13 1:00 PM: Started implementation of color logic in print function. 
+4/13 3:00 PM: Finished COLOR_PAIR logic in print for items and sprites. 
+4/13 4:00 PM: Testing loading in main, functional loaded items and monsters w/ color.
+4/14 3:00 PM: Added functions to factories to handle more artifact and unique monster logic. 
+4/14 3:30 PM: Added alive/dead unique monster regeneration logic to generate move function.
+4/14 4:30 PM: Final tests, loading and artifact/unique logic working as intended. 

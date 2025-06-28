@@ -1,0 +1,24 @@
+4/25 2:00 PM: Started assignment.
+4/25 3:00 PM: Started implementation of RANGED combat, added ranged_mode to dungeon class and example RANGED items to object_desc.txt.
+4/25 4:00 PM: Testing RANGED item parsing and placement in dungeon, found some bugs in process_pc_input and printing. 
+4/25 4:30 PM: Fixed a bug in turn incrementation that was causing an infinite loop.
+4/25 6:00 PM: Fixed a bug in regeneration and turn incrementation that was causing an infinite loop after regeneration. 
+4/25 7:00 PM: Fixed a bug in printing that was causing monsters to be rendered in incorrect locations when "fog of war" is active. 
+4/25 7:30 PM: Fixed a bug in printing that was causing PC position to be rendered incorrectly after teleporting. 
+4/25 8:00 PM: Added AMMUNITION items to object_desc.txt, testing AMMUNITION item parsing and placement in dungeon. 
+4/26 1:00 PM: Implemented most of RANGED attack logic in process_pc_input (cursor system similar to teleport), added range and damage calculation to RANGED attack logic. 
+4/26 3:00 PM: Added AMMUNITION logic to RANGED attacks, added inventory selection, damage calculation, and AMMUNITION consumption.
+4/26 3:30 PM: Added a simple targeting info display to RANGED attack mode. 
+4/26 4:30 PM: Fixed a bug where RANGED attacks were not incrementing player turn, fixed a bug with range calculation.
+4/26 5:00 PM: Testing RANGED attacks, everything looks to be working as intended. 
+4/27 1:00 PM: Started implementation of spell/magic ranged combat, added SCROLL itmes to object_desc.txt.
+4/27 2:00 PM: Testing SCROLL item parsing and placement in dungeon, added SCROLL selection logic to magic combat mode.
+4/27 4:00 PM: Implemented most of SCROLL attack logic in process_pc_input (cursor system but with radius), added range, AOE attack and damage calculation, and SCROLL consumption. 
+4/27 5:00 PM: Added a simple targeting and attack info display to SCROLL attack mode. 
+4/27 5:30 PM: Testing SCROLL attacks, everything looks to be working as intended.
+4/27 6:00 PM: Fixed a bug with PC inventory and regeneration causing inventory to incorrectly transfer between regeneration. 
+4/28 2:00 PM: Started implementation of a simple mana system for SCROLL attacks. 
+4/28 3:00 PM: Added mana logic to PC and added a simple HP and mana regeneration system, resting (5, ' ', .) now regenrates 5% of PC HP and 10% of PC mana.
+4/28 3:30 PM: Fixed a bug where PC HP was not transfering correctly after regeneration. 
+4/28 4:00 PM: Added a quantity display to AMMUNITION within inventory list.
+4/28 4:30 PM: Testing RANGED and SCROLL combat, everything seems to be working as intended.

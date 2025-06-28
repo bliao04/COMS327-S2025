@@ -1,0 +1,22 @@
+This program generates a random 80x21 dungeon layout with rooms, corridors, and staircases. Rooms are placed until the maximum number of rooms have been 
+placed or the maximum number of attempts has been reached and an x/y coordinate pathing algorithm is used to connect rooms. Staircases are randomly placed
+on floor tiles within the dungeon (currently only 1 up and down staircase). Monsters are randomly generated and placed within the dungeon with each monster 
+having the capability of possessing certain attributes (intelligence, telepathy, tunneling, erratic behavior). Based on the attributes monsters either use pathfinding 
+to find and approach the PC or move randomly with tunneling monsters having the ability to tunnel through walls.
+This iteration of the dungeon generator ports the entire game from C to C++ with the major structs from the C code being converted to C++ classes.
+This iteration of the dungeon generator also implements "Fog of War" where the PC is unable to immediately see the entire dungeon, instead it has a sight radius of 3 (5x5 region of the dungeon)
+which can be seen and remembered. All dungeon terrain once seen is remembered even after movement and all dungeon terrain that has yet to be seen is rendered as ' '. 
+This iteration of the dungeon generator also implements two debugging commands accessible by keyboard input. One is a "Fog of War" toggle effect from input 'f', pressing f while "Fog of War" is 
+enabled with disable it and vice versa. Second is a teleport PC command from input 'g', pressing g will render the entire dungeon (even if "Fog of War" is enabled) and all movement input commands will
+switch from moving the PC char to a cursor char '*' (moving cursor does not count as a turn), after moving the cursor to the desired teleport location pressing g a second time 
+will teleport the PC char to the cursor char. There is also a random teleport which can be done by first pressing g and then pressing r which will immediately teleport the PC to a random tile within
+the dungeon. Both commands allow the PC to teleport into rock (except immutible border) however after teleporting if the PC is surrounded by rock it is unlikely it will be able to get out without
+teleporting again. 
+
+Users should compile the code with the following format: g++ -Wall -Werror -ggdb dungeon_generator.cpp heap.cpp monsters.cpp dungeon.cpp print.cpp sprite.cpp monster.cpp pc.cpp -lm -lncurses -o dungeon_generator
+Or use the Makefile with the following format: make dungeon_generator
+Users should run the program with the following formats: 
+./dungeon_generator to generate a random dungeon.
+./dungeon_generator --save to generate a random dungeon and save to file or save the loaded dungeon back to file.
+./dungeon_generator --load to load the dungeon from file. 
+./dungeon_generator --nummon to generate a dungeon with a specific number of monsters, put the number of monsters you would like to generate after the --nummon flag eg 1,2,3,etc (Note: when using the --nummon flag with --load or --save, use the --nummon flag before the --load or --save flag).

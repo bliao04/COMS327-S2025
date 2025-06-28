@@ -1,0 +1,17 @@
+This program generates a random 80x21 dungeon layout with rooms, corridors, and staircases. Rooms are placed until the maximum number of rooms have been 
+placed or the maximum number of attempts has been reached and an x/y coordinate pathing algorithm is used to connect rooms. Staircases are randomly placed
+on floor tiles within the dungeon (currently only 1 up and down staircase). Monsters are randomly generated and placed within the dungeon with each monster 
+having the capability of possessing certain attributes (intelligence, telepathy, tunneling, erratic behavior). Based on the attributes monsters either use pathfinding 
+to find and approach the PC or move randomly with tunneling monsters having the ability to tunnel through walls. 
+This iteration of the dungeon generator implements parsing monster and item definitions from file then printing said definitions to terminal.
+This iteration of the dungeon generator also implements a dice class for RPG game functions like attack damage and monster/item attributes. 
+This iteration of the dungeon generator also implements a rudimentary item class (only used for parsing and printing at the moment) to be developed in future iterations. 
+(NOTE: This iteration is not playable, instead the program will stop running after printing parsed monster and item definitions).
+
+Users should compile the code with the following format: g++ -Wall -Werror -ggdb dungeon_generator.cpp heap.cpp monsters.cpp dungeon.cpp print.cpp sprite.cpp monster.cpp pc.cpp dice.cpp -lm -lncurses -o dungeon_generator
+Or use the Makefile with the following format: make dungeon_generator
+Users should run the program with the following formats: 
+./dungeon_generator to generate a random dungeon.
+./dungeon_generator --save to generate a random dungeon and save to file or save the loaded dungeon back to file.
+./dungeon_generator --load to load the dungeon from file. 
+./dungeon_generator --nummon to generate a dungeon with a specific number of monsters, put the number of monsters you would like to generate after the --nummon flag eg 1,2,3,etc (Note: when using the --nummon flag with --load or --save, use the --nummon flag before the --load or --save flag).

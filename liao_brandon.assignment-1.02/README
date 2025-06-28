@@ -1,0 +1,13 @@
+This program generates a random 80x21 dungeon layout with rooms, corridors, and staircases. Rooms placed until the maximum number of rooms have been 
+placed or the maximum number of attempts has been reached and an x/y coordinate pathing algorithm is used to connect rooms. Staircases are randomly placed
+on floor tiles within the dungeon (currently only 1 up and down staircase). 
+This iteration of the dungeon generator implements file saving and loading using endian conversions to ensure all data is written in network order.
+This iteration also contains hardness values for tiles within the dungeon with all corridors set at a hardness value of 0 and all walls set with a 
+hardness value of 255. 
+
+Users should compile the code with the following format: gcc dungeon_generator.c -o dungeon_generator -lm -Wall -Werror
+Or use the Makefile with the following format: make dungeon_generator
+Users should run the program with the following formats: 
+./dungeon_generator to generate a random dungeon.
+./dungeon_generator --save to generate a random dungeon and save to file.
+./dungeon_generator --load to to load the dungeon from file. 
